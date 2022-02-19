@@ -9,13 +9,18 @@ import {
 
 import Card from "../components/Card";
 import { useStarships } from "../hooks/useStarships";
+import {
+  NavigationContainer,
+  useNavigationContainerRef,
+} from "@react-navigation/native";
 
-const renderItem = (props) => {
-  console.log(props);
+const renderItem = (props: any) => {
   return <Card yolo={props.item} />;
 };
 
 const FeedScreen = () => {
+  const navigationRef = useNavigationContainerRef();
+
   const { isLoading, isError, data } = useStarships();
 
   if (isLoading) {
@@ -40,9 +45,9 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
     marginTop: 20,
-    backgroundColor: "#FAEBD7",
+    backgroundColor: "white",
     borderRadius: 1,
-    borderColor: "black",
+    borderColor: "white",
     borderWidth: 1,
   },
   card: {
