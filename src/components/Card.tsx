@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+import { Button } from "react-native-paper";
 
 interface Props {
   yolo: {
@@ -18,6 +19,9 @@ const Card = ({ yolo }: Props) => {
       <Image source={require("../../assets/img1.jpeg")} style={styles.img} />
       <Text style={styles.model}>{model}</Text>
       <Text style={styles.credit}>{yolo.cost_in_credits} $</Text>
+      <Button mode="Outlined" onPress={() => alert("😀")}>
+        Acheter
+      </Button>
     </View>
   );
 };
