@@ -15,30 +15,34 @@ const Card = ({ yolo }: Props) => {
   return (
     <View style={styles.card}>
       <Text style={styles.name}>{name}</Text>
-      <Image style={styles.img} source={{ uri: url }} />
+      <Image source={require("../../assets/img1.jpeg")} style={styles.img} />
       <Text style={styles.model}>{model}</Text>
-      <Text style={styles.credit}>{yolo.cost_in_credits}</Text>
+      <Text style={styles.credit}>{yolo.cost_in_credits} $</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "black",
+    backgroundColor: "#A9A9A9",
     justifyContent: "center",
     alignItems: "center",
     margin: 10,
     minHeight: 300,
+    borderRadius: 10,
   },
   name: {
-    color: "white",
+    color: "black",
     fontSize: 30,
+    padding: 5,
   },
   model: {
-    color: "white",
+    padding: 3,
+    color: "black",
   },
   credit: {
-    color: "white",
+    color: "black",
+    padding: 3,
   },
   img: {
     width: 300,

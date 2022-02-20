@@ -32,6 +32,7 @@ const FeedScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={styles.marketPlace}>MarketPlace 🛸 </Text>
       <FlatList data={data.results} renderItem={renderItem} />
     </SafeAreaView>
   );
@@ -42,13 +43,18 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
   },
+  marketPlace: {
+    textAlign: "center",
+    fontSize: 20,
+    padding: 10,
+    color: "black",
+
+    borderRadius: 10,
+  },
   container: {
     paddingHorizontal: 20,
     marginTop: 20,
     backgroundColor: "white",
-    borderRadius: 1,
-    borderColor: "white",
-    borderWidth: 1,
   },
   card: {
     backgroundColor: "white",
